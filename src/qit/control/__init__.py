@@ -1,0 +1,1 @@
+"""Quantum control module."""

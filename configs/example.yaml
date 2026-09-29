@@ -1,0 +1,32 @@
+# QUANTIS — QUantum Advanced Nanoscale Technology & Information Systems
+# Example configuration
+
+name: quantis_experiment
+description: "Example QUANTIS configuration"
+
+# Surface code parameters
+surface_code:
+  distance: 3
+  error_rate: 0.01
+  num_trials: 1000
+
+# Circuit optimization
+optimization:
+  coupling_map: linear
+  num_qubits: 4
+  passes:
+    - cancel_inverse
+    - commutation
+    - merge_rotations
+    - template_matching
+
+# Quantum ML
+quantum_ml:
+  feature_map: zz
+  num_qubits: 4
+  num_layers: 2
+  learning_rate: 0.01
+  max_iterations: 100
+
+# Output
+output_dir: results/

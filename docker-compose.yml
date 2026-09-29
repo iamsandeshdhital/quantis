@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  quantis:
+    build: .
+    volumes:
+      - ./results:/app/results
+    environment:
+      - PYTHONUNBUFFERED=1
+    command: ["-m", "qit.cli", "--demo"]
+
+  quantis-api:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./results:/app/results
+    command: ["-m", "uvicorn", "qit.api:app", "--host", "0.0.0.0", "--port", "8000"]
+
+  quantis-jupyter:
+    build: .
+    ports:
+      - "8888:8888"
+    volumes:
+      - ./examples:/app/examples
+      - ./results:/app/results
+    command: ["jupyter", "notebook", "--ip=0.0.0.0", "--port=8888", "--no-browser", "--allow-root"]

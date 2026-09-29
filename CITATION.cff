@@ -1,0 +1,35 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "QUANTIS — QUantum Advanced Nanoscale Technology & Information Systems"
+abstract: >-
+  A revolutionary quantum computing research framework. Implements quantum
+  error correction, circuit optimization,
+  quantum machine learning, and quantum compilation.
+authors:
+  - family-names: Dhital
+    given-names: Sandesh
+version: 1.0.0
+date-released: "2026-09-29"
+license: MIT
+keywords:
+  - quantum computing
+  - error correction
+  - surface codes
+  - circuit optimization
+  - quantum machine learning
+  - quantum compilation
+references:
+  - type: article
+    authors:
+      - family-names: Fowler
+        given-names: Austin G.
+    title: "Surface codes: Towards practical large-scale quantum computation"
+    year: 2012
+    doi: 10.1103/PhysRevA.86.032324
+  - type: article
+    authors:
+      - family-names: Havlíček
+        given-names: Vojtěch
+    title: "Supervised learning with quantum-enhanced feature spaces"
+    year: 2019
+    doi: 10.1038/s41586-019-0980-2
